@@ -14,6 +14,7 @@ namespace Library_IS
         [STAThread]
         static void Main()
         {
+            //Sveiks Aigars
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
