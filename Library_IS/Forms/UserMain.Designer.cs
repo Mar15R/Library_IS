@@ -32,6 +32,7 @@
             this.gv_UserBooks = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_AddReview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Available)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_UserBooks)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +42,7 @@
             this.gv_Available.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv_Available.Location = new System.Drawing.Point(68, 12);
             this.gv_Available.Name = "gv_Available";
-            this.gv_Available.Size = new System.Drawing.Size(1289, 306);
+            this.gv_Available.Size = new System.Drawing.Size(1101, 306);
             this.gv_Available.TabIndex = 0;
             this.gv_Available.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Available_CellClick);
             // 
@@ -50,7 +51,7 @@
             this.gv_UserBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gv_UserBooks.Location = new System.Drawing.Point(70, 343);
             this.gv_UserBooks.Name = "gv_UserBooks";
-            this.gv_UserBooks.Size = new System.Drawing.Size(1287, 323);
+            this.gv_UserBooks.Size = new System.Drawing.Size(1099, 231);
             this.gv_UserBooks.TabIndex = 1;
             this.gv_UserBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_UserBooks_CellClick);
             // 
@@ -72,11 +73,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Taken";
             // 
+            // btn_AddReview
+            // 
+            this.btn_AddReview.Location = new System.Drawing.Point(24, 586);
+            this.btn_AddReview.Name = "btn_AddReview";
+            this.btn_AddReview.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddReview.TabIndex = 4;
+            this.btn_AddReview.Text = "Add Review";
+            this.btn_AddReview.UseVisualStyleBackColor = true;
+            this.btn_AddReview.Click += new System.EventHandler(this.btn_AddReview_Click);
+            // 
             // UserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1399, 677);
+            this.ClientSize = new System.Drawing.Size(1200, 677);
+            this.Controls.Add(this.btn_AddReview);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gv_UserBooks);
@@ -97,5 +109,6 @@
         private System.Windows.Forms.DataGridView gv_UserBooks;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_AddReview;
     }
 }
