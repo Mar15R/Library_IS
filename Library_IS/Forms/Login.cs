@@ -62,8 +62,13 @@ namespace Library_IS
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txt_Username.Text = "LBalode";
-            txt_Password.Text = "LBalode1!";
+            // User
+            txt_Username.Text = "KarlisO";
+            txt_Password.Text = "Parole123";
+
+            //Admin
+            //txt_Username.Text = "KarlisO";
+            //txt_Password.Text = "Parole123";
         }
     }
 }
