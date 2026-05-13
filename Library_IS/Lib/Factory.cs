@@ -11,7 +11,7 @@ namespace Library_IS.Lib
     public class Factory
     {
         Repository repo = new Repository(new LibraryEntities());
-        //:)
+        //:) :)
         public User InsertUser(User user)
         {
             try
