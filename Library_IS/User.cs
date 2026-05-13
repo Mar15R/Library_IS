@@ -18,6 +18,7 @@ namespace Library_IS
         public User()
         {
             this.UserBook = new HashSet<UserBook>();
+            this.BookReview = new HashSet<BookReview>();
         }
     
         public string Name { get; set; }
@@ -31,5 +32,7 @@ namespace Library_IS
         public virtual UserRole UserRole { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserBook> UserBook { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BookReview> BookReview { get; set; }
     }
 }
