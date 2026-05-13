@@ -215,5 +215,50 @@ namespace Library_IS.Lib
                 throw ex;
             }
         }
+
+        public List<BookReviewsView> GetBookReviewsById(long bookId)
+        {
+            try
+            {
+                return repo.GetEntities<BookReview>().Where(br => br.Id_Book == bookId)
+                          .Select(br => new BookReviewsView
+                          {
+                              Id_Review = br.Id_Review,
+                              BookName = br.Book.Book_Name,
+                              ReviewText = br.ReviewText,
+                              UserFullName = br.User.Name + " " + br.User.Surname,
+                              DateTime = br.DateTime
+                          }).ToList();
+            }
+            catch (Exception ex)
+            {
+                // Ieteikums: Log kļūdu šeit, ja nepieciešams
+                throw;
+            }
+        }
+
+        public List<BookReviewsView> GetAllBooksReview()
+        {
+            try
+            {
+                return repo.GetEntities<BookReview>()
+                          .Select(br => new BookReviewsView
+                          {
+                              Id_Review = br.Id_Review,
+                              BookName = br.Book.Book_Name,
+                              ReviewText = br.ReviewText,
+                              UserFullName = br.User.Name + " " + br.User.Surname,
+                              DateTime = br.DateTime
+                          }).ToList();
+            }
+            catch
+            {
+                throw;
+
+            }
+        }
+
+
+
     }
 }
