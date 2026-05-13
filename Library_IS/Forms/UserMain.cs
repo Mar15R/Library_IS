@@ -49,6 +49,8 @@ namespace Library_IS.Forms
         {
             helper.ReloadGrid(gv_Available, factory.GetAvailableBooks(), null, true, false);
             helper.ReloadGrid(gv_UserBooks, factory.GetUserBooks(_user.UserName), null, false, true);
+            helper.ReloadGrid(gv_BookReviews, factory.GetAllBooksReview(), null, false, false);
+
         }
 
         private void gv_UserBooks_CellClick(object sender, DataGridViewCellEventArgs e)
