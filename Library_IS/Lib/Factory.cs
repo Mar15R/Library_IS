@@ -220,14 +220,14 @@ namespace Library_IS.Lib
         {
             try
             {
-                return repo.GetEntities<BookReview>().Where(br => br.Id_Book == bookId)
+                return repo.GetEntities<BookReview>().Where(br => br.ID_Book == bookId)
                           .Select(br => new BookReviewsView
                           {
-                              Id_Review = br.Id_Review,
+                              Id_Review = br.ID_Review,
                               BookName = br.Book.Book_Name,
                               ReviewText = br.ReviewText,
                               UserFullName = br.User.Name + " " + br.User.Surname,
-                              DateTime = br.DateTime
+                              DateTime = br.Date_Time
                           }).ToList();
             }
             catch (Exception ex)
@@ -244,11 +244,11 @@ namespace Library_IS.Lib
                 return repo.GetEntities<BookReview>()
                           .Select(br => new BookReviewsView
                           {
-                              Id_Review = br.Id_Review,
+                              Id_Review = br.ID_Review,
                               BookName = br.Book.Book_Name,
                               ReviewText = br.ReviewText,
                               UserFullName = br.User.Name + " " + br.User.Surname,
-                              DateTime = br.DateTime
+                              DateTime = br.Date_Time
                           }).ToList();
             }
             catch
