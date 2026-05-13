@@ -32,25 +32,29 @@
             this.gv_UserBooks = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_AddReview = new System.Windows.Forms.Button();
+            this.gv_BookReviews = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Available)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_UserBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_BookReviews)).BeginInit();
             this.SuspendLayout();
             // 
             // gv_Available
             // 
             this.gv_Available.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_Available.Location = new System.Drawing.Point(68, 12);
+            this.gv_Available.Location = new System.Drawing.Point(15, 28);
             this.gv_Available.Name = "gv_Available";
-            this.gv_Available.Size = new System.Drawing.Size(1289, 306);
+            this.gv_Available.Size = new System.Drawing.Size(674, 346);
             this.gv_Available.TabIndex = 0;
             this.gv_Available.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Available_CellClick);
             // 
             // gv_UserBooks
             // 
             this.gv_UserBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_UserBooks.Location = new System.Drawing.Point(70, 343);
+            this.gv_UserBooks.Location = new System.Drawing.Point(12, 406);
             this.gv_UserBooks.Name = "gv_UserBooks";
-            this.gv_UserBooks.Size = new System.Drawing.Size(1287, 323);
+            this.gv_UserBooks.Size = new System.Drawing.Size(685, 282);
             this.gv_UserBooks.TabIndex = 1;
             this.gv_UserBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_UserBooks_CellClick);
             // 
@@ -66,17 +70,47 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 343);
+            this.label2.Location = new System.Drawing.Point(12, 390);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Taken";
             // 
+            // btn_AddReview
+            // 
+            this.btn_AddReview.Location = new System.Drawing.Point(725, 650);
+            this.btn_AddReview.Name = "btn_AddReview";
+            this.btn_AddReview.Size = new System.Drawing.Size(451, 38);
+            this.btn_AddReview.TabIndex = 4;
+            this.btn_AddReview.Text = "Add Review";
+            this.btn_AddReview.UseVisualStyleBackColor = true;
+            this.btn_AddReview.Click += new System.EventHandler(this.btn_AddReview_Click);
+            // 
+            // gv_BookReviews
+            // 
+            this.gv_BookReviews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv_BookReviews.Location = new System.Drawing.Point(725, 28);
+            this.gv_BookReviews.Name = "gv_BookReviews";
+            this.gv_BookReviews.Size = new System.Drawing.Size(451, 604);
+            this.gv_BookReviews.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(722, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Reviews";
+            // 
             // UserMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1399, 677);
+            this.ClientSize = new System.Drawing.Size(1200, 710);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.gv_BookReviews);
+            this.Controls.Add(this.btn_AddReview);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gv_UserBooks);
@@ -86,6 +120,7 @@
             this.Load += new System.EventHandler(this.UserMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_Available)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_UserBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_BookReviews)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +132,8 @@
         private System.Windows.Forms.DataGridView gv_UserBooks;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_AddReview;
+        private System.Windows.Forms.DataGridView gv_BookReviews;
+        private System.Windows.Forms.Label label3;
     }
 }

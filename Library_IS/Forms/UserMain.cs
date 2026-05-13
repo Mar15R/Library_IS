@@ -67,5 +67,10 @@ namespace Library_IS.Forms
 
             }
         }
+
+        private void btn_AddReview_Click(object sender, EventArgs e)
+        {
+            // pagaidām tukšs. 
+        }
     }
 }
