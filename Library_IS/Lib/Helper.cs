@@ -9,7 +9,7 @@ namespace Library_IS.Lib
 {
     public class Helper
     {
-        public void ReloadGrid<T>(DataGridView gridName, List<T> dataSource, List<int> hideCollIdx = null, bool hasTakeAction = false, bool hasReturnAction = false) where T : class
+        public void ReloadGrid<T>(DataGridView gridName, List<T> dataSource, List<int> hideCollIdx = null, bool hasTakeAction = false, bool hasReturnAction = false, bool hasOpenAction = false) where T : class
         {
             try
             {
@@ -42,6 +42,15 @@ namespace Library_IS.Lib
                     btnReturn.Text = "Return";
                     btnReturn.UseColumnTextForButtonValue = true;
                     gridName.Columns.Add(btnReturn);
+                }
+                if (hasOpenAction)
+                {
+                    DataGridViewButtonColumn btnOpen = new DataGridViewButtonColumn();
+                    btnOpen.HeaderText = "Actions";
+                    btnOpen.Name = "btnOpen";
+                    btnOpen.Text = "Open Review";
+                    btnOpen.UseColumnTextForButtonValue = true;
+                    gridName.Columns.Add(btnOpen);
                 }
             }
             catch { throw; }
