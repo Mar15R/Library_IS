@@ -15,6 +15,5 @@ namespace Library_IS.Views
         public string ReviewText { get; set; }
         public System.DateTime DateTime { get; set; }
 
-
     }
 }
