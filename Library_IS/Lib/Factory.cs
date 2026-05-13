@@ -216,11 +216,11 @@ namespace Library_IS.Lib
             }
         }
 
-        public List<BookReviewsView> GetBookReviewsById(long bookId)
+        public List<BookReviewsView> GetBookReviewsById(long reviewId)
         {
             try
             {
-                return repo.GetEntities<BookReview>().Where(br => br.ID_Book == bookId)
+                return repo.GetEntities<BookReview>().Where(br => br.ID_Review == reviewId)
                           .Select(br => new BookReviewsView
                           {
                               Id_Review = br.ID_Review,

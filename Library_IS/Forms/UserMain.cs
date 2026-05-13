@@ -47,9 +47,9 @@ namespace Library_IS.Forms
         }
         private void ReloadData()
         {
-            helper.ReloadGrid(gv_Available, factory.GetAvailableBooks(), null, true, false);
-            helper.ReloadGrid(gv_UserBooks, factory.GetUserBooks(_user.UserName), null, false, true);
-            helper.ReloadGrid(gv_BookReviews, factory.GetAllBooksReview(), null, false, false);
+            helper.ReloadGrid(gv_Available, factory.GetAvailableBooks(), null, true, false,false);
+            helper.ReloadGrid(gv_UserBooks, factory.GetUserBooks(_user.UserName), null, false, true,false);
+            helper.ReloadGrid(gv_BookReviews, factory.GetAllBooksReview(), null, false, false, true);
 
         }
 
@@ -73,6 +73,35 @@ namespace Library_IS.Forms
         private void btn_AddReview_Click(object sender, EventArgs e)
         {
             // pagaidām tukšs. 
+        }
+
+        private void gv_BookReviews_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex < 0) return;
+
+
+            if (gv_BookReviews.Columns[e.ColumnIndex].Name == "btnOpen")
+            {
+
+                var bookReview = (BookReviewsView)gv_BookReviews.Rows[e.RowIndex].DataBoundItem;
+
+                if (bookReview != null)
+                {
+
+                    BookReviewForma detalizetaForma = new BookReviewForma();
+
+                    detalizetaForma.IeladetDatus(
+                        bookReview.UserFullName,
+                        bookReview.DateTime.ToString("dd.MM.yyyy HH:mm"),
+                        bookReview.ReviewText,
+                        bookReview.BookName
+                    );
+
+
+                    detalizetaForma.ShowDialog();
+                }
+            }
         }
     }
 }

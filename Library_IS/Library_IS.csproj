@@ -85,6 +85,12 @@
     <Compile Include="Forms\BookRegister.Designer.cs">
       <DependentUpon>BookRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BookReviewForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BookReviewForma.Designer.cs">
+      <DependentUpon>BookReviewForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BookRegister.resx">
       <DependentUpon>BookRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BookReviewForma.resx">
+      <DependentUpon>BookReviewForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
