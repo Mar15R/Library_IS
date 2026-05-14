@@ -92,6 +92,7 @@
             this.Controls.Add(this.cb_Books);
             this.Name = "ReviewForm";
             this.Text = "ReviewForm";
+            this.Load += new System.EventHandler(this.ReviewForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,7 +14,7 @@ namespace Library_IS.Forms
 {
     public partial class UserMain : Form
     {
-        Helper helper = new Helper(); 
+        Helper helper = new Helper();
         Factory factory = new Factory();
         private User _user;
         public UserMain(User user)
@@ -25,8 +25,8 @@ namespace Library_IS.Forms
 
         private void UserMain_Load(object sender, EventArgs e)
         {
-            
-            ReloadData();   
+
+            ReloadData();
         }
 
         private void gv_Available_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -47,8 +47,8 @@ namespace Library_IS.Forms
         }
         private void ReloadData()
         {
-            helper.ReloadGrid(gv_Available, factory.GetAvailableBooks(), null, true, false,false);
-            helper.ReloadGrid(gv_UserBooks, factory.GetUserBooks(_user.UserName), null, false, true,false);
+            helper.ReloadGrid(gv_Available, factory.GetAvailableBooks(), null, true, false, false);
+            helper.ReloadGrid(gv_UserBooks, factory.GetUserBooks(_user.UserName), null, false, true, false);
             helper.ReloadGrid(gv_BookReviews, factory.GetAllBooksReview(), null, false, false, true);
 
         }
@@ -72,7 +72,12 @@ namespace Library_IS.Forms
 
         private void btn_AddReview_Click(object sender, EventArgs e)
         {
-            // pagaidām tukšs. 
+            using (ReviewForm popup = new ReviewForm(_user.UserName))
+            {
+                popup.StartPosition = FormStartPosition.CenterParent;
+                popup.ShowDialog(this);
+                helper.ReloadGrid(gv_BookReviews, factory.GetAllBooksReview(), null, false, false, true);
+            }
         }
 
         private void gv_BookReviews_CellClick(object sender, DataGridViewCellEventArgs e)

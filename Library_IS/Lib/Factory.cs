@@ -258,7 +258,13 @@ namespace Library_IS.Lib
             }
         }
 
-
-
+        public BookReview InsertBookReview(BookReview review)
+        {
+            try
+            {
+                return repo.InsertEntity(review);
+            }
+            catch { throw; }
+        }
     }
 }
