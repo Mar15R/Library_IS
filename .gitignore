@@ -2,14 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/Library_IS/CopilotIndices/17.14.1601.40145/CodeChunks.db
-/.vs/Library_IS/CopilotIndices/17.14.1601.40145
-/.vs/Library_IS/FileContentIndex
-/.vs/Library_IS/v17/.suo
-/.vs/Library_IS/v17/DocumentLayout.backup.json
-/.vs/Library_IS/v17/DocumentLayout.json
-/Library_IS/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-/Library_IS/obj/Debug/Library_IS.csproj.AssemblyReference.cache
-/Library_IS/obj/Debug
-/Library_IS/bin/Debug
-/packages/EntityFramework.6.5.2
+/.vs/
+/Library_IS/.vs/
+/Library_IS/bin/
+/Library_IS/obj/
+/packages/
+/.git/
